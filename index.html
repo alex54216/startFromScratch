@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- 不能眼高手低，写一个轮播的功能 -->
+    <div id="bannerWarp">
+        <span id="left">left</span>
+        <div id="bg"></div>
+        <span class="right">
+            right
+        </span>
+        <ol>
+            <li>
+                <img src="./img/1.png" alt="">
+            </li>
+            <li>
+                <img src="./img/2.png" alt="">
+            </li>
+            <li>
+                <img src="./img/3.png" alt="">
+            </li>
+            <li>
+                <img src="./img/4.png" alt="">
+            </li>
+        </ol>
+    </div>
+    <p>
+        1. 可能是史上最丑的轮播图 <br>
+        2. 发现的问题  <br>
+        js原生修改背景图应该是 XX.style.XXX = 'xxx',我经常忘记style <br>
+        3.获取一个元素下的子元素，this.queryseletor('xxx')
+    </p>
+    <script src="index.js"></script>
+</body>
+</html>

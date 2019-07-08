@@ -1,0 +1,46 @@
+#bannerWarp{
+    position: relative;
+    width:500px;
+    height:500px;
+    margin:0 auto;
+    border:1px solid #ccc;
+}
+#bannerWarp span{
+    display: block;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    border:1px solid #ccc;
+}
+#bannerWarp span.right{
+    right:0px;
+}
+#bg{
+    width:500px;
+    height:300px;
+    border:1px solid #ccc;
+    background-image: url('img/1.png');
+    background-repeat: no-repeat;
+}
+#bannerWarp ol{
+    list-style: none;
+}
+ol li{
+    width:40px;
+    height:40px;
+    background-color: red;
+    margin:10px; 
+    float: left;
+    position: relative
+}
+ol li img{
+    position: absolute;
+    top:-40px;
+    display: none;
+}
+p{
+    text-align: center;
+}

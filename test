@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #prev,#next,#content{
+            float: left;
+        }
+        #prev,#next{
+            width:30px;
+            height:30px;
+            background: yellowgreen;
+        }
+        #content{
+            width:500px;
+            height: 400px;
+            position: relative;
+        }
+        .sp1{
+            position: absolute;
+            left:0px;
+            top:20px;
+            display: block;
+            transition: all 1s;
+            width:100px;
+            height:100px;
+            border-radius: 50%;
+            background: green;
+        }
+        .sp2{
+            position: absolute;
+            left:80px;
+            top:20px;
+            display: block;
+            transition: all 1s;
+            width:100px;
+            height:100px;
+            border-radius: 50%;
+            background: blue;
+            z-index: 2;
+        }
+        .sp3{
+            position: absolute;
+            left:160px;
+            top:20px;
+            display: block;
+            transition: all 1s;
+            width:100px;
+            height:100px;
+            border-radius: 50%;
+            background: gold;
+        }
+    </style>
+</head>
+<body>
+    <div id="prev">
+        prev
+    </div>
+    <div id="content">
+        <span class="sp1">1</span>
+        <span class="sp2">2</span>
+        <span class="sp3">3</span>
+    </div>
+    <div id="next">
+        next
+    </div>
+    <script>
+        (function(){
+            var prev = document.querySelector('#prev')
+            var content = document.querySelector('#content')
+            var next = document.querySelector('#next')
+            var spans = document.querySelectorAll('#content span')
+            var classlist = [];
+            for(var i =0;i<spans.length;i++){
+                classlist.push(spans[i].className)
+            }
+            prev.onclick = function(){
+
+               classlist.unshift(classlist.pop())
+               for(var i = 0;i<spans.length;i++){
+                   spans[i].classList = classlist[i]
+               }
+            }
+            next.onclick = function(){
+               classlist.push(classlist.shift())
+               for(var i = 0;i<spans.length;i++){
+                spans[i].classList = classlist[i]
+               }
+            }
+        })()
+    </script>
+</body>
+</html>
